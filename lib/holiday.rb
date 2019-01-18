@@ -64,14 +64,14 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, hash|
     puts "#{season.capitalize}:"
     hash.each do |holiday, supplies|
-      str = ""
+      str = nil
       if holiday.to_s.include?("_")
         temp = holiday.to_s.split("_")
         temp.each {|word| word.capitalize!}
         holiday = temp.join(" ")
         str = "  #{holiday}: "
       end
-      str = "  #{holiday.capitalize}: " if str = ""
+      str = "  #{holiday.capitalize}: " if !str
       supplies.each {|supply| str << "#{supply}, "}
       puts str.chomp(", ")
     end
