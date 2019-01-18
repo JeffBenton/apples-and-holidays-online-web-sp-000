@@ -69,7 +69,7 @@ def all_supplies_in_holidays(holiday_hash)
         temp = holiday.to_s.split("_")
         temp.each {|word| word.capitalize!}
         holiday = temp.join(" ")
-        str = "  #{holiday}"
+        str = "  #{holiday}: "
       end
       str = "  #{holiday.capitalize}: " if !str
       supplies.each {|supply| str << "#{supply}, "}
