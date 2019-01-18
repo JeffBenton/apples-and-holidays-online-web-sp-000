@@ -70,6 +70,7 @@ def all_supplies_in_holidays(holiday_hash)
         temp.each {|word| word.capitalize!}
         starter = temp.join(" ")
       end
+      puts "#{starter} hello"
       str = "  #{starter.capitalize}: "
       supplies.each {|supply| str << "#{supply}, "}
       puts str.chomp(", ")
